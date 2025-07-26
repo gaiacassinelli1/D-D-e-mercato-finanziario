@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Classes Analytics - Mappa del Tesoro</title>
+    <link rel="stylesheet" href="dnd_css.css">
+</head>
+<body>
+    <!-- Sfondo con icone D&D -->
+    <div class="background-icons">
+        <!-- Le icone verranno generate dinamicamente da JavaScript -->
+    </div>
+
+    <!-- Intestazione della mappa -->
+    <header class="treasure-header">
+        <h1 class="ancient-title">🗺️ Mappa del Tesoro delle Classi D&D 🗺️</h1>
+        <p class="subtitle">Un'Epica Avventura attraverso MongoDB, Neo4j e i Mercati Finanziari</p>
+        <div class="compass">🧭</div>
+    </header>
+
+    <!-- Percorso principale -->
+    <main class="treasure-path">
+        
+        <!-- SEZIONE 1: MONGODB - L'INIZIO DEL VIAGGIO -->
+        <section class="treasure-section" id="mongodb-section">
+            <div class="section-header">
+                <h2 class="section-title">⚔️ MongoDB: Le Fondamenta dell'Avventura</h2>
+                <div class="section-icon">🧝‍♂️</div>
+            </div>
+            
+            <div class="treasure-grid">
+                <!-- Analisi Complessità Incantesimi -->
+                <div class="treasure-card" data-analysis="spell-heatmap">
+                    <div class="card-header">
+                        <h3>🔥 La Mappa del Calore degli Incantesimi</h3>
+                        <span class="treasure-icon">✨</span>
+                    </div>
+                    <img src="./dnd_images/6_spell_distribution_heatmap.png" alt="Spell Distribution Heatmap" class="analysis-image">
+                    <div class="card-description">
+                        <p>L'heatmap definitiva! Wizard domina con un'esplosione di rosso attraverso tutti i livelli - sono letteralmente "on fire"! Ogni casella mostra quanti incantesimi ogni classe conosce per livello. È come vedere la distribuzione XP di un MMORPG!</p>
+                    </div>
+                </div>
+
+                <!-- Dominanza Scuole di Magia -->
+                <div class="treasure-card" data-analysis="magic-schools">
+                    <div class="card-header">
+                        <h3>🏆 La Classifica delle Scuole Dominanti</h3>
+                        <span class="treasure-icon">🎭</span>
+                    </div>
+                    <img src="./dnd_images/3_school_market_dominance.png" alt="Magic School Market Dominance" class="analysis-image">
+                    <div class="card-description">
+                        <p>Evocation e Transmutation si contendono il trono con 60 e 59 incantesimi! È come la Serie A delle scuole magiche, dove ogni spell conta per la supremazia. Necromancy chiude la classifica, ma ricorda: non è la quantità, è come li usi!</p>
+                    </div>
+                </div>
+
+                <!-- Distribuzione Equipaggiamento -->
+                <div class="treasure-card" data-analysis="equipment-tiers">
+                    <div class="card-header">
+                        <h3>🗡️ L'Economia dell'Equipaggiamento Avventuriero</h3>
+                        <span class="treasure-icon">🛡️</span>
+                    </div>
+                    <img src="./dnd_images/4_equipment_tiers.png" alt="Equipment Market Tier Distribution" class="analysis-image">
+                    <div class="card-description">
+                        <p>Il tier pricing del mondo fantasy! Standard domina come la classe media dell'equipaggiamento, mentre Budget ed Economy rappresentano l'attrezzatura da avventurieri alle prime armi. Premium e Luxury? Solo per i party che hanno fatto incetta di tesori draghi!</p>
+                    </div>
+                </div>
+
+                <!-- Vantaggi Razziali -->
+                <div class="treasure-card" data-analysis="racial-advantages">
+                    <div class="card-header">
+                        <h3>🧬 La Genetica Razziale Competitiv</h3>
+                        <span class="treasure-icon">👑</span>
+                    </div>
+                    <img src="./dnd_images/5_racial_advantages.png" alt="Racial Competitive Advantages" class="analysis-image">
+                    <div class="card-description">
+                        <p>Human master race confermato! Questa classifica mostra i vantaggi competitivi di ogni razza. Humans in testa con 15.5 punti, seguiti da Half-Orc. Poor Gnomes in ultima posizione - ma hey, almeno sono carini!</p>
+                    </div>
+                </div>
+
+                <!-- Rarità Incantesimi -->
+                <div class="treasure-card" data-analysis="spell-rarity">
+                    <div class="card-header">
+                        <h3>🪄 Il Mercato della Rarità Magica"</h3>
+                        <span class="treasure-icon">🌟</span>
+                    </div>
+                    <img src="./dnd_images/2_spell_rarity_distribution.png" alt="Spell Rarity Distribution" class="analysis-image">
+                    <div class="card-description">
+                        <p>La torta della rarità degli incantesimi! Come in ogni buon loot system, gli Uncommon dominano il mercato magico, seguiti da Rare ed Exclusive.</p>
+                    </div>
+                </div>
+
+                <!-- Confronto Potere Classi -->
+                <div class="treasure-card" data-analysis="class-power">
+                    <div class="card-header">
+                        <h3>⚔️ Il Campo di Battaglia delle Classi D&D</h3>
+                        <span class="treasure-icon">🏆</span>
+                    </div>
+                    <img src="./dnd_images/1_class_power_metrics.png" alt="Class Power Comparison" class="analysis-image">
+                    <div class="card-description">
+                        <p>Scatter plot epico! Qui vediamo chi colpisce più forte (Power Score) contro chi è più versatile (Survivability Score). Wizard domina nell'angolo in basso a destra come il boss finale, mentre Barbarian occupa fieramente l'angolo della sopravvivenza brutale. Ogni bubble racconta una storia eroica!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERCORSO VERSO NEO4J -->
+        <div class="path-connector">
+            <div class="path-line"></div>
+            <div class="path-milestone">
+                <span class="milestone-icon">🗺️</span>
+                <p>Il viaggio continua verso le reti misteriose...</p>
+            </div>
+        </div>
+
+        <!-- SEZIONE 2: NEO4J - LE CONNESSIONI SEGRETE -->
+        <section class="treasure-section" id="neo4j-section">
+            <div class="section-header">
+                <h2 class="section-title">🕸️ Neo4j: Le Reti del Destino</h2>
+                <div class="section-icon">🧙‍♀️</div>
+            </div>
+            
+            <div class="treasure-grid">
+                <!-- Grafo delle classi per incantesi condivisi -->
+                <div class="treasure-card" data-analysis="spell-network">
+                    <div class="card-header">
+                        <h3>🕸️ La Rete Sociale delle Classi D&D</h3>
+                        <span class="treasure-icon">🌐</span>
+                    </div>
+                    <img src="./dnd_images/7_spell_class_network.png" alt="Spell Class Network" class="analysis-image">
+                    <div class="card-description">
+                        <p>Il network di LinkedIn del mondo fantasy! Le dimensioni dei nodi mostrano l'influenza di ogni classe nella rete degli incantesimi condivisi. Wizard è ovviamente l'influencer principale, mentre le connessioni rivelano chi collabora con chi nel multiverso magico!</p>
+                    </div>
+                </div>
+
+                <!-- Dominanza della scuola di magia -->
+                <div class="treasure-card" data-analysis="school-dominance">
+                    <div class="card-header">
+                        <h3>🌍 L'Ecosistema delle Scuole Magiche</h3>
+                        <span class="treasure-icon">⭐</span>
+                    </div>
+                    <img src="./dnd_images/9_school_dominance_ecosystem.pngg" alt="School Dominance Analysis" class="analysis-image">
+                    <div class="card-description">
+                        <p>Il bubble chart finale! Penetrazione di mercato vs numero totale di incantesimi - è come vedere quali scuole dominano l'economia magica. Transmutation ed Evocation sono i giganti tech del mondo magico, mentre Necromancy e Illusion sono le startup innovative!</p>
+                    </div>
+                </div>
+
+                <!-- Bridge Spells -->
+                <div class="treasure-card" data-analysis="bridge-spells">
+                    <div class="card-header">
+                        <h3>🌉 Gli Incantesimi Ponte del Multiverso</h3>
+                        <span class="treasure-icon">🔮</span>
+                    </div>
+                    <img src="./dnd_images/10_spell_bridge_analysis.png" alt="Top Bridge Spells Analysis" class="analysis-image">
+                    <div class="card-description">
+                        <p>Detect Magic e Dispel Magic dominano come gli incantesimi più versatili per connettere diverse classi! Questi due campioni di livello 1 e 3 sono i veri MVP del toolkit magico, seguiti da una squadra di supporto di incantesimi di livello 2 e 4. È come avere le chiavi universali del multiverso magico!</p>
+                    </div>
+                </div>
+
+                <!-- Heatmap competizione tra scuole -->
+                <div class="treasure-card" data-analysis="school-matrix">
+                    <div class="card-header">
+                        <h3>📚 La Guerra delle Scuole Magiche </h3>
+                        <span class="treasure-icon">📊</span>
+                    </div>
+                    <img src="./dnd_images/11_school_competition_matrix.png" alt="Class Spell Distribution Heatmap" class="analysis-image">
+                    <div class="card-description">
+                        <p>Benvenuti al torneo delle scuole di magia! Questa matrice di calore rivela chi condivide i segreti arcani con chi. Le zone rosse mostrano dove le scuole si sovrappongono come alleati naturali, mentre i quadrati bianchi rappresentano le combinazioni più rare. Divinazione vs tutti gli altri - chi vincerà?</p>
+                    </div>
+                </div>
+
+                <!-- Sinergia Multiclasse Avanzata -->
+                <div class="treasure-card" data-analysis="multiclass-synergy">
+                    <div class="card-header">
+                        <h3>🤝 L'Alleanza del Multiclassing</h3>
+                        <span class="treasure-icon">🔗</span>
+                    </div>
+                    <img src="./dnd_images/8_multiclass_synergy_network.png" alt="Advanced Multiclass Synergy Network" class="analysis-image">
+                    <div class="card-description">
+                        <p>La mappa delle sinergie! Lo spessore delle linee mostra quanto bene si combinano le classi. È come un dating app per multiclasser - chi si accoppia meglio con chi? Alcune connessioni sono matrimoni fatti in paradiso, altre... meno!</p>
+                    </div>
+                </div>
+
+                <!-- Dipendenza dai componenti -->
+                <div class="treasure-card" data-analysis="component-dependency">
+                    <div class="card-header">
+                        <h3>🧪 L'Anatomia degli Incantesimi: Componenti Richiesti!"</h3>
+                        <span class="treasure-icon">📏</span>
+                    </div>
+                    <img src="./dnd_images/12_component_dependency_analysis.png" alt="Component Dependency" class="analysis-image">
+                    <div class="card-description">
+                        <p>Cantare, gesticolare o brandire un focus? Questo grafico mostra quanto ogni livello di incantesimo dipende dalle tre componenti magiche. I Cantrip sono più "manuali", mentre gli incantesimi di alto livello richiedono meno componenti materiali. È la progressione del mago da principiante a maestro!</p>
+                    </div>
+                </div>
+
+                <!-- Matrice Sinergia -->
+                <div class="treasure-card" data-analysis="synergy-matrix">
+                    <div class="card-header">
+                        <h3>🏰 Le Curve di Potere delle Scuole Magiche</h3>
+                        <span class="treasure-icon">⚔️</span>
+                    </div>
+                    <img src="./dnd_images/13_power_progression_curves.png" alt="Multiclass Synergy Matrix" class="analysis-image">
+                    <div class="card-description">
+                        <p>Ogni scuola ha il suo momento di gloria! Evocation domina i primi livelli come un barbaro magico, mentre altre scuole hanno i loro picchi strategici. È come vedere l'andamento delle azioni nel mercato magico - investi nella scuola giusta al momento giusto!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERCORSO VERSO MERCATO FINANZIARIO -->
+        <div class="path-connector">
+            <div class="path-line"></div>
+            <div class="path-milestone">
+                <span class="milestone-icon">💰</span>
+                <p>Le classi si trasformano in potenti investimenti...</p>
+            </div>
+        </div>
+
+        <!-- SEZIONE 3: MERCATO FINANZIARIO - IL TESORO FINALE -->
+        <section class="treasure-section" id="financial-section">
+            <div class="section-header">
+                <h2 class="section-title">💹 Mercato Finanziario: Il Tesoro Supremo</h2>
+                <div class="section-icon">🧌</div>
+            </div>
+            
+            <div class="treasure-grid">
+                <!-- P/E Ratio Analysis -->
+                <div class="treasure-card" data-analysis="pe-ratio">
+                    <div class="card-header">
+                        <h3>📈 Il Rating P/E delle Gilde Avventurose</h3>
+                        <span class="treasure-icon">💰</span>
+                    </div>
+                    <img src="./market_images/1_pe_ratio_valuation.png" alt="D&D Class Stock Valuation P/E Ratio" class="analysis-image">
+                    <div class="card-description">
+                        <p>La classifica della sopravvalutazione! Monk domina con un P/E stratosferico da leggenda epica, mentre Wizard mantiene un valore più ragionevole da "stock value". Le linee tratteggiate mostrano le zone di pericolo: verde per "sottovalutato" (occasione d'oro!), giallo per "giusto prezzo", rosso per "troppo caro". È come confrontare il costo di ingaggio delle varie classi!</p>
+                    </div>
+                </div>
+
+                <!-- Dividend Analysis -->
+                <div class="treasure-card" data-analysis="dividend-analysis">
+                    <div class="card-header">
+                        <h3>💵 Il Dividendo delle Corporazioni Eroiche</h3>
+                        <span class="treasure-icon">🏆</span>
+                    </div>
+                    <img src="./market_images/2_dividend_yield_ranking.png" alt="D&D Class Stock Dividend Analysis" class="analysis-image">
+                    <div class="card-description">
+                        <p>Chi paga meglio i propri azionisti? Barbarian guida la classifica dei dividendi con lo 0.70% - perfetto per gli investitori che vogliono rendite passive! I caster sono all'ultimo posto: troppo impegnati a studiare magie per pensare ai profitti. La linea blu del 3% segna il "Santo Graal" degli income investors!</p>
+                    </div>
+                </div>
+
+                <!-- Market Capitalization -->
+                <div class="treasure-card" data-analysis="market-cap">
+                    <div class="card-header">
+                        <h3>🏛️ Le Mega-Corporazioni del Multiverso</h3>
+                        <span class="treasure-icon">👑</span>
+                    </div>
+                    <img src="./market_images/3_market_cap_visualization.png" alt="D&D Class Stock Market Capitalization" class="analysis-image">
+                    <div class="card-description">
+                        <p>Size matters! Wizard Corporation domina con 1.488 miliardi di capitalizzazione - è letteralmente il FAANG del mondo fantasy! Le linee tratteggiate separano Mid Cap da Large Cap. Rogue e Monk rimangono nelle startup, ma chi lo sa... potrebbero essere il prossimo unicorno!</p>
+                    </div>
+                </div>
+
+                <!-- Beta Risk Analysis -->
+                <div class="treasure-card" data-analysis="beta-risk">
+                    <div class="card-header">
+                        <h3>⚖️ L'Analisi del Rischio Beta: Chi Surfa Meglio la Volatilità?</h3>
+                        <span class="treasure-icon">📊</span>
+                    </div>
+                    <img src="./market_images/4_beta_risk_assessment.png" alt="D&D Class Beta Risk Analysis" class="analysis-image">
+                    <div class="card-description">
+                        <p>Wizard e Sorcerer sono i "safe haven" con beta bassissimi - stabili come rocce elfiche! Monk è l'high-risk high-reward del portfolio. Il grafico a destra mostra la correlazione rischio-rendimento: alcuni preferiscono la stabilità, altri il brivido della volatilità di mercato!</p>
+                    </div>
+                </div>
+
+                <!-- Sector Analysis -->
+                <div class="treasure-card" data-analysis="sector-analysis">
+                    <div class="card-header">
+                        <h3>⚔️ La Grande Guerra: Caster vs Martial Industries</h3>
+                        <span class="treasure-icon">⚔️</span>
+                    </div>
+                    <img src="./market_images/5_sector_performance_comparison.png" alt="D&D Market Sector Analysis" class="analysis-image">
+                    <div class="card-description">
+                        <p>Il confronto settoriale definitivo! Caster dominano in capitalizzazione (5.7 trilioni!) ma Martial hanno performance leggermente negative. È la classica battaglia tra "old economy" (spadaccini) e "new tech" (maghi). I dividend? Martial pagano di più - devono attirare investitori dopo le perdite!</p>
+                    </div>
+                </div>
+
+                <!-- Price vs Performance -->
+                <div class="treasure-card" data-analysis="price-performance">
+                    <div class="card-header">
+                        <h3>🎪 Il Grande Circo del Trading: Prezzi vs Performance</h3>
+                        <span class="treasure-icon">📈</span>
+                    </div>
+                    <img src="./market_images/6_price_performance_bubble.png" alt="D&D Stock Price vs Performance Analysis" class="analysis-image">
+                    <div class="card-description">
+                        <p>Bubble chart spettacolare! Ogni bolla è dimensionata per market cap e colorata per livello di rischio. Druid e Cleric volano in alto con performance positive, mentre i martial languono nel quadrante basso. Wizard, nonostante il prezzo alto, ha performance piatte - è davvero troppo costoso?</p>
+                    </div>
+                </div>
+
+                <!-- Trading Volume -->
+                <div class="treasure-card" data-analysis="trading-volume">
+                    <div class="card-header">
+                        <h3>💹 L'Arena del Volume: Chi Muove Più Denaro?</h3>
+                        <span class="treasure-icon">🔄</span>
+                    </div>
+                    <img src="./market_images/7_volume_activity_analysis.png" alt="D&D Stock Trading Volume Analysis" class="analysis-image">
+                    <div class="card-description">
+                        <p>Wizard guida il volume di trading con 0.1M - è il titolo più "liquido" del mercato! La correlazione positiva (0.521) suggerisce che più volume = migliori performance. È come vedere chi genera più buzz nella taverna degli investitori. Alcuni titoli sono più "chiacchierati" di altri!</p>
+                    </div>
+                </div>
+
+                <!-- Financial Dashboard -->
+                <div class="treasure-card dashboard-card" data-analysis="financial-dashboard">
+                    <div class="card-header">
+                        <h3>🎮 La Dashboard del Dungeon Master Finanziario</h3>
+                        <span class="treasure-icon">💎</span>
+                    </div>
+                    <img src="./market_images/8_comprehensive_dashboard.png" alt="D&D Market Financial Dashboard" class="analysis-image">
+                    <div class="card-description">
+                        <p>Il centro di comando definitivo per navigare i mercati fantasy! Con 11 classi quotate e 7.9B di capitalizzazione totale, il mercato D&D mostra un leggero +0.3% - sentiment cautamente ottimista.
+I Top Gainers brillano in verde: Druid e Cleric (+0.9%) guidano il rally, mentre Fighter e Monk soffrono nel rosso. Wizard domina i volumi con 0.1M - è il titolo più "chiacchierato" della taverna.
+La Financial Heatmap è la vera gemma: ogni cella color-coded rivela punti di forza e debolezza. Verde = sopra la media, rosso = sotto performance. Wizard conferma il suo status di "titolo estremo" - alto in tutto, dal prezzo al rischio.
+È come avere un Occhio Onniveggente sui mercati: tutto quello che serve per decisioni di investimento sagge in un colpo d'occhio!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESORO FINALE -->
+        <div class="treasure-final">
+            <div class="final-treasure-chest">
+                <div class="chest-icon">💰</div>
+                <h2>🏆 Tesoro Conquistato! 🏆</h2>
+                <p>Hai completato l'epica avventura attraverso le analisi delle classi D&D!</p>
+                <div class="completion-stats">
+                    <span>📊 MongoDB: 6 Analisi</span>
+                    <span>🕸️ Neo4j: 7 Reti</span>
+                    <span>💹 Mercato: 8 Metriche</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer della mappa -->
+    <footer class="treasure-footer">
+        <p>🗡️ Forgiato nelle terre mistiche di Data Science & Analytics 🛡️</p>
+        <div class="footer-icons">
+            <span>⚔️</span>
+            <span>🏰</span>
+            <span>🐉</span>
+            <span>💎</span>
+        </div>
+    </footer>
+
+    <script src="dnd_js.js"></script>
+</body>
+</html>

@@ -1,0 +1,885 @@
+/* ===== RESET E BASE ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Uncial+Antiqua&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Uncial Antiqua', serif;
+    background: linear-gradient(45deg, #f4e4bc, #e8d5b7, #ddc49a);
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(139, 69, 19, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 80%, rgba(160, 82, 45, 0.1) 1px, transparent 1px),
+        linear-gradient(45deg, transparent 40%, rgba(139, 69, 19, 0.05) 50%, transparent 60%);
+    min-height: 100vh;
+    color: #3c2414;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a0522d' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ===== ICONE FLUTTUANTI ===== */
+.background-icons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    opacity: 0.15;
+    animation: float 6s ease-in-out infinite;
+    filter: sepia(1) hue-rotate(30deg) saturate(1.5);
+}
+
+.floating-icon:nth-child(2n) {
+    animation-delay: -2s;
+    animation-duration: 8s;
+}
+
+.floating-icon:nth-child(3n) {
+    animation-delay: -4s;
+    animation-duration: 7s;
+}
+
+.floating-icon.cloud {
+    animation: drift 12s ease-in-out infinite;
+    opacity: 0.1;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes drift {
+    0%, 100% { transform: translateX(0px) translateY(0px); }
+    25% { transform: translateX(10px) translateY(-5px); }
+    50% { transform: translateX(-5px) translateY(-10px); }
+    75% { transform: translateX(-10px) translateY(-5px); }
+}
+
+/* ===== HEADER DELLA MAPPA ===== */
+.treasure-header {
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+    z-index: 10;
+    background: radial-gradient(ellipse at center, rgba(244, 228, 188, 0.9), transparent);
+    border-bottom: 3px solid #8b4513;
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+}
+
+.ancient-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #8b4513;
+    text-shadow: 
+        2px 2px 0px #d2b48c,
+        4px 4px 8px rgba(139, 69, 19, 0.3);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.2);
+}
+
+.compass {
+    font-size: 4rem;
+    animation: spin 20s linear infinite;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6));
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.compass:hover {
+    transform: scale(1.1);
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ===== SEZIONI DEL TESORO ===== */
+.treasure-path {
+    position: relative;
+    z-index: 5;
+    padding: 2rem;
+}
+
+.treasure-section {
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    color: #8b4513;
+    text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.3);
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #cd853f;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.section-icon {
+    font-size: 3rem;
+    margin-top: 1rem;
+    opacity: 0.8;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* ===== GRID DEL TESORO ===== */
+.treasure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.treasure-card {
+    background: linear-gradient(135deg, rgba(244, 228, 188, 0.95), rgba(222, 196, 154, 0.95));
+    border: 3px solid #8b4513;
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 
+        0 8px 32px rgba(139, 69, 19, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.treasure-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #cd853f, #daa520, #cd853f);
+    border-radius: 22px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.treasure-card:hover::before {
+    opacity: 1;
+}
+
+.treasure-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 
+        0 20px 40px rgba(139, 69, 19, 0.3),
+        0 0 30px rgba(218, 165, 32, 0.4);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(139, 69, 19, 0.3);
+    padding-bottom: 1rem;
+}
+
+.card-header h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.2);
+}
+
+.treasure-icon {
+    font-size: 2rem;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { transform: scale(1) rotate(0deg); filter: brightness(1); }
+    50% { transform: scale(1.2) rotate(10deg); filter: brightness(1.3); }
+}
+
+.analysis-image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border: 2px solid #cd853f;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s ease;
+}
+
+.treasure-card:hover .analysis-image {
+    transform: scale(1.05);
+}
+
+.card-description {
+    color: #5d4037;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.card-description strong {
+    color: #8b4513;
+    font-weight: bold;
+}
+
+/* ===== CONNETTORI DEL PERCORSO ===== */
+.path-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem 0;
+    position: relative;
+}
+
+.path-line {
+    width: 4px;
+    height: 100px;
+    background: linear-gradient(to bottom, #cd853f, #daa520, #cd853f);
+    border-radius: 2px;
+    position: relative;
+    animation: pathGlow 3s ease-in-out infinite;
+}
+
+.path-line::before,
+.path-line::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #daa520;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.path-line::before { top: -6px; }
+.path-line::after { bottom: -6px; }
+
+@keyframes pathGlow {
+    0%, 100% { box-shadow: 0 0 10px rgba(218, 165, 32, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(218, 165, 32, 0.8); }
+}
+
+.path-milestone {
+    text-align: center;
+    background: rgba(244, 228, 188, 0.9);
+    border: 2px solid #8b4513;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.2);
+}
+
+.milestone-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* ===== TESORO FINALE ===== */
+.treasure-final {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+}
+
+.final-treasure-chest {
+    background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.2), rgba(244, 228, 188, 0.9));
+    border: 4px solid #daa520;
+    border-radius: 25px;
+    padding: 3rem;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 
+        0 15px 35px rgba(218, 165, 32, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    animation: treasureGlow 4s ease-in-out infinite;
+}
+
+@keyframes treasureGlow {
+    0%, 100% { box-shadow: 0 15px 35px rgba(218, 165, 32, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.5); }
+    50% { box-shadow: 0 20px 50px rgba(218, 165, 32, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.7); }
+}
+
+.chest-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: chestBounce 3s ease-in-out infinite;
+}
+
+@keyframes chestBounce {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.1) rotate(-5deg); }
+    75% { transform: scale(1.1) rotate(5deg); }
+}
+
+.final-treasure-chest h2 {
+    font-size: 2.0rem;
+    color: #8b4513;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.3);
+}
+
+.final-treasure-chest p {
+    font-size: 1.3rem;
+    color: #a0522d;
+    margin-bottom: 2rem;
+}
+
+.completion-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.completion-stats span {
+    background: rgba(139, 69, 19, 0.1);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    border: 2px solid #cd853f;
+    font-weight: bold;
+    color: #8b4513;
+    text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.2);
+}
+
+/* ===== FOOTER ===== */
+.treasure-footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 3px solid #8b4513;
+    background: linear-gradient(135deg, rgba(244, 228, 188, 0.8), rgba(222, 196, 154, 0.8));
+    margin-top: 4rem;
+}
+
+.treasure-footer p {
+    font-size: 1.2rem;
+    color: #8b4513;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.2);
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-icons span {
+    font-size: 2rem;
+    animation: footerFloat 4s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.5s);
+}
+
+.footer-icons span:nth-child(1) { --i: 0; }
+.footer-icons span:nth-child(2) { --i: 1; }
+.footer-icons span:nth-child(3) { --i: 2; }
+.footer-icons span:nth-child(4) { --i: 3; }
+
+@keyframes footerFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* ===== DASHBOARD SPECIALE ===== */
+.dashboard-card {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(244, 228, 188, 0.95));
+    border: 4px solid #daa520;
+}
+
+.dashboard-card .analysis-image {
+    height: 400px;
+}
+
+/* ===== NAVIGAZIONE FLUTTUANTE ===== */
+.treasure-nav {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1500;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.treasure-nav button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #8b4513;
+    background: rgba(244, 228, 188, 0.9);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+}
+
+.treasure-nav button:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 20px rgba(218, 165, 32, 0.5);
+}
+
+/* ===== MODALI ===== */
+.treasure-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(139, 69, 19, 0.9);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: modalAppear 0.3s ease-out;
+}
+
+.treasure-modal .treasure-card {
+    max-width: 90%;
+    max-height: 90%;
+    transform: scale(1.2);
+    position: relative;
+    overflow-y: auto;
+}
+
+.treasure-modal button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #8b4513;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+/* ===== NOTIFICHE ===== */
+.treasure-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.9), rgba(244, 228, 188, 0.9));
+    border: 3px solid #daa520;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    z-index: 2000;
+    animation: notificationSlide 3s ease-out forwards;
+    box-shadow: 0 10px 30px rgba(218, 165, 32, 0.4);
+}
+
+/* ===== PARTICELLE MAGICHE ===== */
+.magical-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ===== SCROLL EFFECTS ===== */
+.treasure-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: cardAppear 0.8s ease-out forwards;
+}
+
+.treasure-card:nth-child(1) { animation-delay: 0.1s; }
+.treasure-card:nth-child(2) { animation-delay: 0.2s; }
+.treasure-card:nth-child(3) { animation-delay: 0.3s; }
+.treasure-card:nth-child(4) { animation-delay: 0.4s; }
+.treasure-card:nth-child(5) { animation-delay: 0.5s; }
+.treasure-card:nth-child(6) { animation-delay: 0.6s; }
+.treasure-card:nth-child(7) { animation-delay: 0.7s; }
+.treasure-card:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes cardAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ANIMAZIONI AGGIUNTIVE ===== */
+@keyframes particleFloat {
+    0% {
+        opacity: 0;
+        transform: translateY(100vh) scale(0);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(90vh) scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(-10vh) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20vh) scale(0);
+    }
+}
+
+@keyframes hoverParticle {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5) translateY(-50px);
+    }
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes modalDisappear {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes notificationSlide {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    90% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes notificationFade {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes secretTreasure {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0) rotate(180deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+}
+
+@keyframes secretTreasureFade {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+
+/* ===== EFFETTI SPECIALI ===== */
+.treasure-card:active {
+    transform: translateY(-5px) scale(1.01);
+}
+
+.treasure-icon:hover {
+    animation: sparkleIntense 1s ease-in-out infinite;
+}
+
+@keyframes sparkleIntense {
+    0%, 100% { transform: scale(1) rotate(0deg); filter: brightness(1); }
+    25% { transform: scale(1.3) rotate(-15deg); filter: brightness(1.5); }
+    50% { transform: scale(1.5) rotate(15deg); filter: brightness(2); }
+    75% { transform: scale(1.3) rotate(-10deg); filter: brightness(1.5); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .treasure-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ancient-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .treasure-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .treasure-card {
+        padding: 1.5rem;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .completion-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-icons {
+        gap: 1rem;
+    }
+    
+    .treasure-nav {
+        right: 10px;
+    }
+    
+    .treasure-nav button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .treasure-header {
+        padding: 2rem 1rem;
+    }
+    
+    .ancient-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .treasure-path {
+        padding: 1rem;
+    }
+    
+    .treasure-card {
+        padding: 1rem;
+    }
+    
+    .analysis-image {
+        height: 200px;
+    }
+    
+    .dashboard-card .analysis-image {
+        height: 250px;
+    }
+    
+    .treasure-nav {
+        display: none;
+    }
+}/*: 2px;
+}*/
+
+.subtitle {
+    font-size: 1.4rem;
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.2);
+}
+
+.compass {
+    font-size: 4rem;
+    animation: spin 20s linear infinite;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6));
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.compass:hover {
+    transform: scale(1.1);
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ===== SEZIONI DEL TESORO ===== */
+.treasure-path {
+    position: relative;
+    z-index: 5;
+    padding: 2rem;
+}
+
+.treasure-section {
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    color: #8b4513;
+    text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.3);
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #cd853f;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.section-icon {
+    font-size: 3rem;
+    margin-top: 1rem;
+    opacity: 0.8;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* ===== GRID DEL TESORO ===== */
+.treasure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.treasure-card {
+    background: linear-gradient(135deg, rgba(244, 228, 188, 0.95), rgba(222, 196, 154, 0.95));
+    border: 3px solid #8b4513;
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 
+        0 8px 32px rgba(139, 69, 19, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.treasure-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #cd853f, #daa520, #cd853f);
+    border-radius: 22px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.treasure-card:hover::before {
+    opacity: 1;
+}
+
+.treasure-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 
+        0 20px 40px rgba(139, 69, 19, 0.3),
+        0 0 30px}
