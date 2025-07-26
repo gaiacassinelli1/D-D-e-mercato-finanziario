@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"42282925853b48a2b1486689acc7d3f9","collectionName":"alignments","type":"collection"}

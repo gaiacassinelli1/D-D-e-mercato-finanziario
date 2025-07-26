@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"character_id":{"$numberInt":"1"},"spell_name":{"$numberInt":"1"}},"name":"character_id_1_spell_name_1"}],"uuid":"99a57e6a05264e8f837db9c01d7cf9da","collectionName":"spell_usage_logs","type":"collection"}
