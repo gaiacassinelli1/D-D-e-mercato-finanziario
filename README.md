@@ -68,19 +68,13 @@ git clone https://github.com/tuousername/HeroNomics.git
 cd HeroNomics
 ```
 
-### 2. Installa le pozioni magiche:
-```bash
-pip install -r requirements.txt
-# (Include anche una pozione per la pazienza, ne avrai bisogno)
-```
-
-### 3. Risveglia i database:
+### 2. Risveglia i database:
 ```bash
 # MongoDB: "RISE, MY DATABASE!"
 # Neo4J: "I CHOOSE YOU, GRAPH DATABASE!"
 ```
 
-### 4. Lancia l'incantesimo finale:
+### 3. Lancia l'incantesimo finale:
 ```bash
 python market_simulator.py
 # *attendi mentre la magia opera*
