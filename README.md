@@ -157,9 +157,9 @@ Vuoi contribuire a questo capolavoro della follia?
 ## 📞 Contatti
 
 🧙‍♂️ **Gran Maghe del Codice**: [Gaia Cassinelli](https://github.com/gaiacassinelli1); [Barbara Geroli](https://github.com/BarbaraGeroli)  
-📧 **Cristallo di Comunicazione**: [cassinelligaia@gmail.com](cassinelligaia@gmail.com)  
+📧 **Cristallo di Comunicazione**: [cassinelligaia@gmail.com](cassinelligaia@gmail.com); [b.geroliz@gmail.com](b.geroliz@gmail.com)  
 🏰 **Sede della Gilda**: [GitHub Repository](https://github.com/gaiacassinelli1?tab=repositories)  
-🐦 **Uccello Messaggero**: [LinkedIn](https://www.linkedin.com/in/gaiacassinelli/)
+🐦 **Uccello Messaggero**: [LinkedIn](https://www.linkedin.com/in/gaiacassinelli/)  
 
 ---
 
